@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html data-bs-theme="light">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Sri Lanka Music Therapy Association™</title>
+    <meta name="twitter:title" content="Sri Lanka Music Therapy Association">
+    <meta name="twitter:image" content="https://www.lkmta.site/assets/img/Artboard 1 (1).png">
+    <meta property="og:image" content="https://www.lkmta.site/assets/img/Artboard 1 (1).png">
+    <meta name="description" content="Immerse yourself in the transformative power of music, where the connoisseur's heart becomes the canvas for healing. Our innovative therapeutic approach harnesses the profound synergy between science and art, weaving a tapestry of sound frequencies that resonate deep within your soul.">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:description" content="Immerse yourself in the transformative power of music, where the connoisseur's heart becomes the canvas for healing. Our innovative therapeutic approach harnesses the profound synergy between science and art, weaving a tapestry of sound frequencies that resonate deep within your soul.">
+    <script type="application/ld+json">
+        {
+            "@context": "http://schema.org",
+            "@type": "WebSite",
+            "name": "Sri Lanka Music Therapy Association Official",
+            "url": "https://www.lkmta.site"
+        }
+    </script>
+    <script>
+        (function() {
+
+            // JavaScript snippet handling Dark/Light mode switching
+
+            const getStoredTheme = () => localStorage.getItem('theme');
+            const setStoredTheme = theme => localStorage.setItem('theme', theme);
+            const forcedTheme = document.documentElement.getAttribute('data-bss-forced-theme');
+
+            const getPreferredTheme = () => {
+
+                if (forcedTheme) return forcedTheme;
+
+                const storedTheme = getStoredTheme();
+                if (storedTheme) {
+                    return storedTheme;
+                }
+
+                const pageTheme = document.documentElement.getAttribute('data-bs-theme');
+
+                if (pageTheme) {
+                    return pageTheme;
+                }
+
+                return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+            }
+
+            const setTheme = theme => {
+                if (theme === 'auto' && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                    document.documentElement.setAttribute('data-bs-theme', 'dark');
+                } else {
+                    document.documentElement.setAttribute('data-bs-theme', theme);
+                }
+            }
+
+            setTheme(getPreferredTheme());
+
+            const showActiveTheme = (theme, focus = false) => {
+                const themeSwitchers = [].slice.call(document.querySelectorAll('.theme-switcher'));
+
+                if (!themeSwitchers.length) return;
+
+                document.querySelectorAll('[data-bs-theme-value]').forEach(element => {
+                    element.classList.remove('active');
+                    element.setAttribute('aria-pressed', 'false');
+                });
+
+                for (const themeSwitcher of themeSwitchers) {
+
+                    const btnToActivate = themeSwitcher.querySelector('[data-bs-theme-value="' + theme + '"]');
+
+                    if (btnToActivate) {
+                        btnToActivate.classList.add('active');
+                        btnToActivate.setAttribute('aria-pressed', 'true');
+                    }
+                }
+            }
+
+            window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
+                const storedTheme = getStoredTheme();
+                if (storedTheme !== 'light' && storedTheme !== 'dark') {
+                    setTheme(getPreferredTheme());
+                }
+            });
+
+            window.addEventListener('DOMContentLoaded', () => {
+                showActiveTheme(getPreferredTheme());
+
+                document.querySelectorAll('[data-bs-theme-value]')
+                    .forEach(toggle => {
+                        toggle.addEventListener('click', (e) => {
+                            e.preventDefault();
+                            const theme = toggle.getAttribute('data-bs-theme-value');
+                            setStoredTheme(theme);
+                            setTheme(theme);
+                            showActiveTheme(theme);
+                        })
+                    })
+            });
+        })();
+    </script>
+    <link rel="icon" type="image/png" sizes="576x576" href="assets/img/Artboard%201%20(1).png">
+    <link rel="icon" type="image/png" sizes="576x576" href="assets/img/Artboard%201%20(1).png" media="(prefers-color-scheme: dark)">
+    <link rel="icon" type="image/png" sizes="576x576" href="assets/img/Artboard%201%20(1).png">
+    <link rel="icon" type="image/png" sizes="576x576" href="assets/img/Artboard%201%20(1).png" media="(prefers-color-scheme: dark)">
+    <link rel="icon" type="image/png" sizes="576x576" href="assets/img/Artboard%201%20(1).png">
+    <link rel="icon" type="image/png" sizes="576x576" href="assets/img/Artboard%201%20(1).png">
+    <link rel="icon" type="image/png" sizes="576x576" href="assets/img/Artboard%201%20(1).png">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=ABeeZee">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Aclonica&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Acme&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Aguafina+Script&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Allan&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Allison&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Allura&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amita&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cookie">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="assets/css/Animated-Type-Heading.css">
+    <link rel="stylesheet" href="assets/css/Banner-Heading-Image-images.css">
+    <link rel="stylesheet" href="assets/css/Basic-fancyBox-Gallery.css">
+    <link rel="stylesheet" href="assets/css/Bold-BS4-Image-Caption-Hover-Effect-5.css">
+    <link rel="stylesheet" href="assets/css/Bootstrap-4---Team-Members.css">
+    <link rel="stylesheet" href="assets/css/divider-text-middle.css">
+    <link rel="stylesheet" href="assets/css/pikaday.min.css">
+    <link rel="stylesheet" href="assets/css/Pretty-Footer-.css">
+    <link rel="stylesheet" href="assets/css/Responsive-footer-basicfooter.css">
+    <link rel="stylesheet" href="assets/css/Responsive-footer.css">
+    <link rel="stylesheet" href="assets/css/Responsive-Youtube-Embed.css">
+    <link rel="stylesheet" href="assets/css/Staff-Directory.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg fixed-top portfolio-navbar gradient navbar-dark">
+        <div class="container"><a class="navbar-brand logo" href="#">Sri Lanka Music Therapy Association</a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navbarNav"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <div class="theme-switcher dropdown" style="height: 17px;"><a class="dropdown-toggle" aria-expanded="false" data-bs-toggle="dropdown" href="#"><i class="icon ion-ios-lightbulb-outline mb-1"></i></a>
+                    <div class="dropdown-menu"><a class="dropdown-item d-flex align-items-center" href="#" data-bs-theme-value="light"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-sun-fill opacity-50 me-2">
+                                <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"></path>
+                            </svg>Light</a><a class="dropdown-item d-flex align-items-center" href="#" data-bs-theme-value="dark"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-moon-stars-fill opacity-50 me-2">
+                                <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"></path>
+                                <path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"></path>
+                            </svg>Dark</a><a class="dropdown-item d-flex align-items-center" href="#" data-bs-theme-value="auto"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-circle-half opacity-50 me-2">
+                                <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"></path>
+                            </svg>Auto</a></div>
+                </div>
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://application.lkmta.site"> Apply Now</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <main class="page lanidng-page">
+        <section class="portfolio-block block-intro" style="background: url(&quot;assets/img/30753648_musbackround1_10.jpg&quot;);background-size: cover;">
+            <div class="container" style="padding-top: 0px;height: 252px;">
+                <div class="avatar" style="background: url(&quot;assets/img/Artboard%201%20(1).png&quot;);background-size: cover;"></div>
+                <div class="about-me">
+                    <p style="font-family: Allison, serif;font-size: 54px;height: 48px;font-weight: bold;text-shadow: 0px 0px 20px rgb(255,255,255);">Sri Lanka Music Therapy Association</p>
+                </div>
+            </div>
+            <p style="font-size: 14px;font-family: Amita, serif;height: 95px;">LKMTA - SLMTA - 2023</p><a class="btn btn-outline-primary" role="button" href="https://application.lkmta.site">Apply Now</a>
+        </section>
+        <section>
+            <div style="text-align: center;height: 91.3906px;">
+                <h2 class="divider-style"><span>New Event</span></h2>
+            </div>
+        </section>
+        <section>
+            <div>
+                <section class="py-4 py-xl-5">
+                    <div class="container">
+                        <div class="bg-dark border rounded border-0 border-dark overflow-hidden">
+                            <div class="row g-0">
+                                <div class="col-md-6">
+                                    <div class="text-white p-4 p-md-5">
+                                        <h2 class="fw-bold text-white mb-3">Husma 5/&nbsp;හුස්ම 5</h2>
+                                        <p class="mb-4">On 14th of December 2023 at Chilaw Kokkavila Junior College. For more information contact us via WhatsApp or E-Mail.</p>
+                                        <div class="my-3"><a class="btn btn-primary btn-lg me-2" role="button" href="#">WhatsApp</a><a class="btn btn-light btn-lg" role="button" href="#">E-Mail</a></div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 order-first order-md-last" style="min-height: 250px;"><img class="w-100 h-100 fit-cover" src="assets/img/Find%20Us%20On%20YouTube%20Design%20-%20Made%20with%20PosterMyWall.jpg"></div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </section>
+        <section>
+            <div class="container-fluid py-5">
+                <div class="row">
+                    <div class="col-md-6 mb-lg-0" style="padding: 10px;">
+                        <div class="hover hover-5 text-white rounded"><img src="assets/img/IMG-20231130-WA0208%20Husma-4.jpg" alt="image">
+                            <div class="hover-overlay"></div>
+                            <div class="hover-5-content">
+                                <h2 class="text-uppercase hover-5-title fw-light mb-0" style="font-weight: bold;">Malki&nbsp;<strong class="fw-bold text-white">Sanjana</strong><span class="fw-light">&nbsp; Youngest Hypnotist &amp; Co-Founder</span>&nbsp;</h2>
+                                <p class="hover-5-description fw-light mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-lg-0" style="padding: 10px;">
+                        <div class="hover hover-5 text-white rounded"><img src="assets/img/IMG-20231130-WA0205%20Husma-4.jpg" alt="image">
+                            <div class="hover-overlay"></div>
+                            <div class="hover-5-content">
+                                <h2 class="text-uppercase hover-5-title fw-light mb-0" style="font-weight: bold;">Minidu&nbsp;<strong class="fw-bold text-white">Danithra</strong><span class="fw-light">&nbsp; Director &amp; Project Manager</span>&nbsp;</h2>
+                                <p class="hover-5-description fw-light mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="portfolio-block photography">
+            <div class="container">
+                <div class="row g-0">
+                    <div class="col-md-6 col-lg-4 item zoom-on-hover"><a href="#"><img class="img-fluid image" src="assets/img/nature/grp%20photo%201.jpg"></a></div>
+                    <div class="col-md-6 col-lg-4 item zoom-on-hover"><a href="#"><img class="img-fluid image" src="assets/img/nature/husma%204%20watermark%20landscape.jpg"></a></div>
+                    <div class="col-md-6 col-lg-4 item zoom-on-hover"><a href="#"><img class="img-fluid image" src="assets/img/tech/IMG-20231130-WA0238%20Husma-4.jpg"></a></div>
+                </div>
+            </div>
+        </section>
+        <section class="portfolio-block call-to-action border-bottom" style="height: 115.594px;">
+            <div class="container">
+                <div class="d-flex justify-content-center align-items-center content" style="height: 8.5312px;">
+                    <h3>Like to join with us ?</h3><a class="btn btn-outline-primary" role="button" href="https://application.lkmta.site">Apply Now</a>
+                </div>
+            </div>
+        </section>
+    </main>				<div class="caption v-middle text-center">
+					<h1 class="cd-headline clip">
+			            <span class="blc">SLMTA | </span>
+			            <span class="cd-words-wrapper">
+			              <b class="is-visible">STAFF</b>
+			              <b>Directors</b>
+			              <b>Members</b>
+			            </span>
+	          		</h1>
+				</div>
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-sm-6 col-xl-3 mb-5">
+                <div class="bg-white shadow-sm rounded py-5 px-4"><img class="rounded-circle img-fluid shadow-sm mb-3 img-thumbnail" src="assets/img/tech/New%20Project%20(3).jpg" alt="" width="100">
+                    <h5 class="mb-0">Tharusha Dewmith</h5><span class="text-uppercase text-muted small">President &amp; Founder</span>
+                    <ul class="list-inline social mb-0 mt-3">
+                        <li class="list-inline-item list-inline-item"><a href="#" class="social-link"><i class="fa fa-facebook-f"></i></a></li>
+                        <li class="list-inline-item list-inline-item"><a href="#" class="social-link"><i class="fa fa-twitter"></i></a></li>
+                        <li class="list-inline-item list-inline-item"><a href="#" class="social-link"><i class="fa fa-instagram"></i></a></li>
+                        <li class="list-inline-item list-inline-item"><a href="#" class="social-link"><i class="fa fa-linkedin"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-sm-6 col-xl-3 mb-5">
+                <div class="bg-white shadow-sm rounded py-5 px-4"><img class="rounded-circle img-fluid shadow-sm mb-3 img-thumbnail" src="assets/img/tech/New%20Project%20(4).jpg" alt="" width="100">
+                    <h5 class="mb-0">Malki Sanjana</h5><span class="text-uppercase text-muted small">Co-Founder &amp; Coordinator</span>
+                    <ul class="list-inline social mb-0 mt-3">
+                        <li class="list-inline-item list-inline-item"><a href="#" class="social-link"><i class="fa fa-facebook-f"></i></a></li>
+                        <li class="list-inline-item list-inline-item"><a href="#" class="social-link"><i class="fa fa-twitter"></i></a></li>
+                        <li class="list-inline-item list-inline-item"><a href="#" class="social-link"><i class="fa fa-instagram"></i></a></li>
+                        <li class="list-inline-item list-inline-item"><a href="#" class="social-link"><i class="fa fa-linkedin"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-sm-6 col-xl-3 mb-5">
+                <div class="bg-white shadow-sm rounded py-5 px-4"><img class="rounded-circle img-fluid shadow-sm mb-3 img-thumbnail" src="assets/img/tech/New%20Project%20(1).jpg" alt="" width="100">
+                    <h5 class="mb-0">Sharan Senevirathne</h5><span class="text-uppercase text-muted small">Secretary</span>
+                    <ul class="list-inline social mb-0 mt-3">
+                        <li class="list-inline-item list-inline-item"><a href="#" class="social-link"><i class="fa fa-facebook-f"></i></a></li>
+                        <li class="list-inline-item list-inline-item"><a href="#" class="social-link"><i class="fa fa-twitter"></i></a></li>
+                        <li class="list-inline-item list-inline-item"><a href="#" class="social-link"><i class="fa fa-instagram"></i></a></li>
+                        <li class="list-inline-item list-inline-item"><a href="#" class="social-link"><i class="fa fa-linkedin"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-sm-6 col-xl-3 mb-5">
+                <div class="bg-white shadow-sm rounded py-5 px-4"><img class="rounded-circle img-fluid shadow-sm mb-3 img-thumbnail" src="assets/img/tech/New%20Project%20(2).jpg" alt="" width="100">
+                    <h5 class="mb-0">Minidu Danithra</h5><span class="text-uppercase text-muted small">Project Manager</span>
+                    <ul class="list-inline social mb-0 mt-3">
+                        <li class="list-inline-item list-inline-item"><a href="#" class="social-link"><i class="fa fa-facebook-f"></i></a></li>
+                        <li class="list-inline-item list-inline-item"><a href="#" class="social-link"><i class="fa fa-twitter"></i></a></li>
+                        <li class="list-inline-item list-inline-item"><a href="#" class="social-link"><i class="fa fa-instagram"></i></a></li>
+                        <li class="list-inline-item list-inline-item"><a href="#" class="social-link"><i class="fa fa-linkedin"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>				<div class="caption v-middle text-center">
+					<h1 class="cd-headline clip">
+			            <span class="blc">SLMTA | </span>
+			            <span class="cd-words-wrapper">
+			              <b class="is-visible">DIRECTORS</b>
+			              <b>Directors</b>
+			              <b>Members</b>
+			            </span>
+	          		</h1>
+				</div>
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-sm-6 col-xl-3 mb-5">
+                <div class="bg-white shadow-sm rounded py-5 px-4"><img class="rounded-circle img-fluid shadow-sm mb-3 img-thumbnail" src="assets/img/nature/New%20Project%20(6).jpg" alt="" width="100">
+                    <h5 class="mb-0">Ruwan Mahawithana</h5><span class="text-uppercase text-muted small">Chief Excutive Director</span>
+                    <ul class="list-inline social mb-0 mt-3">
+                        <li class="list-inline-item list-inline-item"><a href="#" class="social-link"><i class="fa fa-facebook-f"></i></a></li>
+                        <li class="list-inline-item list-inline-item"><a href="#" class="social-link"><i class="fa fa-twitter"></i></a></li>
+                        <li class="list-inline-item list-inline-item"><a href="#" class="social-link"><i class="fa fa-instagram"></i></a></li>
+                        <li class="list-inline-item list-inline-item"><a href="#" class="social-link"><i class="fa fa-linkedin"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-sm-6 col-xl-3 mb-5">
+                <div class="bg-white shadow-sm rounded py-5 px-4"><img class="rounded-circle img-fluid shadow-sm mb-3 img-thumbnail" src="assets/img/nature/New%20Project%20(5).jpg" alt="" width="100">
+                    <h5 class="mb-0">Rangika Kavishka</h5><span class="text-uppercase text-muted small">Chief Technical Officer</span>
+                    <ul class="list-inline social mb-0 mt-3">
+                        <li class="list-inline-item list-inline-item"><a href="#" class="social-link"><i class="fa fa-facebook-f"></i></a></li>
+                        <li class="list-inline-item list-inline-item"><a href="#" class="social-link"><i class="fa fa-twitter"></i></a></li>
+                        <li class="list-inline-item list-inline-item"><a href="#" class="social-link"><i class="fa fa-instagram"></i></a></li>
+                        <li class="list-inline-item list-inline-item"><a href="#" class="social-link"><i class="fa fa-linkedin"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-sm-6 col-xl-3 mb-5">
+                <div class="bg-white shadow-sm rounded py-5 px-4"><img class="rounded-circle img-fluid shadow-sm mb-3 img-thumbnail" src="assets/img/nature/New%20Project%20(3).jpg" alt="" width="100">
+                    <h5 class="mb-0">Avith Enoch</h5><span class="text-uppercase text-muted small">Director</span>
+                    <ul class="list-inline social mb-0 mt-3">
+                        <li class="list-inline-item list-inline-item"><a href="#" class="social-link"><i class="fa fa-facebook-f"></i></a></li>
+                        <li class="list-inline-item list-inline-item"><a href="#" class="social-link"><i class="fa fa-twitter"></i></a></li>
+                        <li class="list-inline-item list-inline-item"><a href="#" class="social-link"><i class="fa fa-instagram"></i></a></li>
+                        <li class="list-inline-item list-inline-item"><a href="#" class="social-link"><i class="fa fa-linkedin"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-sm-6 col-xl-3 mb-5">
+                <div class="bg-white shadow-sm rounded py-5 px-4"><img class="rounded-circle img-fluid shadow-sm mb-3 img-thumbnail" src="assets/img/nature/New%20Project%20(8).jpg" alt="" width="100">
+                    <h5 class="mb-0">Visal Geesara</h5><span class="text-uppercase text-muted small">Director</span>
+                    <ul class="list-inline social mb-0 mt-3">
+                        <li class="list-inline-item list-inline-item"><a href="#" class="social-link"><i class="fa fa-facebook-f"></i></a></li>
+                        <li class="list-inline-item list-inline-item"><a href="#" class="social-link"><i class="fa fa-twitter"></i></a></li>
+                        <li class="list-inline-item list-inline-item"><a href="#" class="social-link"><i class="fa fa-instagram"></i></a></li>
+                        <li class="list-inline-item list-inline-item"><a href="#" class="social-link"><i class="fa fa-linkedin"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="row text-center">
+            <div class="col-sm-6 col-xl-3 mb-5">
+                <div class="bg-white shadow-sm rounded py-5 px-4"><img class="rounded-circle img-fluid shadow-sm mb-3 img-thumbnail" src="assets/img/nature/New%20Project%20(8)%20(2).jpg" alt="" width="100">
+                    <h5 class="mb-0">Dharitha Thennakoon</h5><span class="text-uppercase text-muted small">Director</span>
+                    <ul class="list-inline social mb-0 mt-3">
+                        <li class="list-inline-item list-inline-item"><a href="#" class="social-link"><i class="fa fa-facebook-f"></i></a></li>
+                        <li class="list-inline-item list-inline-item"><a href="#" class="social-link"><i class="fa fa-twitter"></i></a></li>
+                        <li class="list-inline-item list-inline-item"><a href="#" class="social-link"><i class="fa fa-instagram"></i></a></li>
+                        <li class="list-inline-item list-inline-item"><a href="#" class="social-link"><i class="fa fa-linkedin"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-sm-6 col-xl-3 mb-5">
+                <div class="bg-white shadow-sm rounded py-5 px-4"><img class="rounded-circle img-fluid shadow-sm mb-3 img-thumbnail" src="assets/img/nature/New%20Project%20(7).jpg" alt="" width="100">
+                    <h5 class="mb-0">Sandara Jayasinghe</h5><span class="text-uppercase text-muted small">Director</span>
+                    <ul class="list-inline social mb-0 mt-3">
+                        <li class="list-inline-item list-inline-item"><a href="#" class="social-link"><i class="fa fa-facebook-f"></i></a></li>
+                        <li class="list-inline-item list-inline-item"><a href="#" class="social-link"><i class="fa fa-twitter"></i></a></li>
+                        <li class="list-inline-item list-inline-item"><a href="#" class="social-link"><i class="fa fa-instagram"></i></a></li>
+                        <li class="list-inline-item list-inline-item"><a href="#" class="social-link"><i class="fa fa-linkedin"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-sm-6 col-xl-3 mb-5">
+                <div class="bg-white shadow-sm rounded py-5 px-4"><img class="rounded-circle img-fluid shadow-sm mb-3 img-thumbnail" src="assets/img/nature/New%20Project%20(8)%20(1).jpg" alt="" width="100">
+                    <h5 class="mb-0">P. Vishwadarshani</h5><span class="text-uppercase text-muted small">Director</span>
+                    <ul class="list-inline social mb-0 mt-3">
+                        <li class="list-inline-item list-inline-item"><a href="#" class="social-link"><i class="fa fa-facebook-f"></i></a></li>
+                        <li class="list-inline-item list-inline-item"><a href="#" class="social-link"><i class="fa fa-twitter"></i></a></li>
+                        <li class="list-inline-item list-inline-item"><a href="#" class="social-link"><i class="fa fa-instagram"></i></a></li>
+                        <li class="list-inline-item list-inline-item"><a href="#" class="social-link"><i class="fa fa-linkedin"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-sm-6 col-xl-3 mb-5">
+                <div class="bg-white shadow-sm rounded py-5 px-4"><img class="rounded-circle img-fluid shadow-sm mb-3 img-thumbnail" src="assets/img/nature/New%20Project%20(4).jpg" alt="" width="100">
+                    <h5 class="mb-0">Eshan Induwara</h5><span class="text-uppercase text-muted small">Director</span>
+                    <ul class="list-inline social mb-0 mt-3">
+                        <li class="list-inline-item list-inline-item"><a href="#" class="social-link"><i class="fa fa-facebook-f"></i></a></li>
+                        <li class="list-inline-item list-inline-item"><a href="#" class="social-link"><i class="fa fa-twitter"></i></a></li>
+                        <li class="list-inline-item list-inline-item"><a href="#" class="social-link"><i class="fa fa-instagram"></i></a></li>
+                        <li class="list-inline-item list-inline-item"><a href="#" class="social-link"><i class="fa fa-linkedin"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div style="height: 352px;background: url(&quot;assets/img/husma%205.jpg&quot;) center / cover;">
+        <footer style="height: 829px;padding: 254px 50px;margin: 311px 0px 0px;">
+            <div class="row">
+                <div class="col-sm-6 col-md-4 footer-navigation">
+                    <h3><a href="#">Music<span>Therapy</span></a></h3>
+                    <p class="links">SLMTA - LKMTA - 2023</p>
+                    <p class="company-name">&nbsp;SLMTA-Husma © 2023</p>
+                </div>
+                <div class="col-sm-6 col-md-4 footer-contacts">
+                    <div><span class="fa fa-map-marker footer-contacts-icon"> </span>
+                        <p><span class="new-line-span">24/2, Kokkawila, Mugunuwatawana</span>Chilaw, NWP</p>
+                    </div>
+                    <div><i class="fa fa-phone footer-contacts-icon"></i>
+                        <p class="footer-center-info email text-start">+94 77 428 0195</p>
+                    </div>
+                    <div><i class="fa fa-envelope footer-contacts-icon"></i>
+                        <p> <a href="#" target="_blank">ceo@lkmta.site</a></p>
+                    </div>
+                </div>
+                <div class="col-md-4 footer-about">
+                    <h4>Sri Lanka Music Therapy Association</h4>
+                    <p>All rights reserved&nbsp;<span style="color: rgb(143, 146, 150);">©&nbsp;</span>2023<br><br></p>
+                    <div class="social-links social-icons"><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-linkedin"></i></a><a href="#"><i class="fa fa-github"></i></a></div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.pack.js"></script>
+    <script src="assets/js/Basic-fancyBox-Gallery-myfancybox.js"></script>
+    <script src="assets/js/Animated-Type-Heading-type-headline.js"></script>
+    <script src="assets/js/pikaday.min.js"></script>
+    <script src="assets/js/theme.js"></script>
+</body>
+
+</html>
