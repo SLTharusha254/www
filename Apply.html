@@ -199,23 +199,26 @@
         </section>
     </main>
      <script type="module">
-        function submitForm() {
-            const form = document.getElementById('hireMeForm');
+       function submitForm() {
+    const form = document.getElementById('hireMeForm');
 
-            // Get form data
-            const formData = new FormData(form);
-            const formObject = {};
-            formData.forEach((value, key) => {
-                formObject[key] = value;
-            });
+    // Get form data
+    const formData = new FormData(form);
+    const formObject = {};
+    formData.forEach((value, key) => {
+        formObject[key] = value;
+    });
 
-            // Save data to Firebase
-            const submissionsRef = ref(database, 'submissions');
-            push(submissionsRef, formObject);
+    // Log the form data
+    console.log(formObject);
 
-            // You can add further processing or redirect the user to a thank you page if needed
-            window.location.href = "thank_you.html";
-        }
+    // Save data to Firebase
+    const submissionsRef = ref(database, 'submissions');
+    push(submissionsRef, formObject);
+
+    // You can add further processing or redirect the user to a thank you page if needed
+    window.location.href = "thank_you.html";
+       }
     </script>
     <footer class="page-footer py-3 border-top" style="height: 236.797px;background: linear-gradient(white, #004476 100%);">
         <div style="background-color:rgba(58,47,47,0);background-image:url(&quot;assets/img/footer.png&quot;);background-size:cover;background-repeat:no-repeat;height:366px;">
