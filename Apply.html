@@ -95,43 +95,26 @@
     </script>
     <script src="https://www.gstatic.com/firebasejs/9.6.12/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.6.12/firebase-database.js"></script>
-    <script>
-    // Initialize Firebase with your project config
-    const firebaseConfig = {
-        apiKey: "AIzaSyDlBUBAzhp4heOq-2JB_SnS-p0ngLVUwmk",
-        authDomain: "hire-me-c5936.firebaseapp.com",
-        projectId: "hire-me-c5936",
-        storageBucket: "hire-me-c5936.appspot.com",
-        messagingSenderId: "664514372932",
-        appId: "1:664514372932:web:7910d315b17b301ec02311",
-        measurementId: "G-XEJ7WNQWRD"
-    };
-    firebase.initializeApp(firebaseConfig);
+     <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-analytics.js";
+        import { getDatabase, ref, push } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-database.js";
 
-    // Reference to the database
-    const database = firebase.database();
+        const firebaseConfig = {
+              apiKey: "AIzaSyDlBUBAzhp4heOq-2JB_SnS-p0ngLVUwmk",
+              authDomain: "hire-me-c5936.firebaseapp.com",
+              projectId: "hire-me-c5936",
+              storageBucket: "hire-me-c5936.appspot.com",
+              messagingSenderId: "664514372932",
+              appId: "1:664514372932:web:7910d315b17b301ec02311",
+              measurementId: "G-XEJ7WNQWRD"
+        };
 
-    // Handle form submission
-    document.querySelector('form').addEventListener('submit', function (event) {
-        event.preventDefault();
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+        const database = getDatabase(app);
+    </script>
 
-        const subject = document.getElementById('subject').value;
-        const email = document.getElementById('email').value;
-        const message = document.getElementById('message').value;
-        const date = document.getElementById('hire-date').value;
-
-        // Push data to Firebase
-        database.ref('submissions').push({
-            subject,
-            email,
-            message,
-            date
-        });
-
-        // You can add further processing or redirect the user to a thank you page if needed
-        window.location.href = "thank_you.html";
-    });
-</script>
     <link rel="icon" type="image/png" sizes="576x576" href="assets/img/Artboard%201%20(1).png">
     <link rel="icon" type="image/png" sizes="576x576" href="assets/img/Artboard%201%20(1).png" media="(prefers-color-scheme: dark)">
     <link rel="icon" type="image/png" sizes="576x576" href="assets/img/Artboard%201%20(1).png">
@@ -215,6 +198,25 @@
             </div>
         </section>
     </main>
+     <script type="module">
+        function submitForm() {
+            const form = document.getElementById('hireMeForm');
+
+            // Get form data
+            const formData = new FormData(form);
+            const formObject = {};
+            formData.forEach((value, key) => {
+                formObject[key] = value;
+            });
+
+            // Save data to Firebase
+            const submissionsRef = ref(database, 'submissions');
+            push(submissionsRef, formObject);
+
+            // You can add further processing or redirect the user to a thank you page if needed
+            window.location.href = "thank_you.html";
+        }
+    </script>
     <footer class="page-footer py-3 border-top" style="height: 236.797px;background: linear-gradient(white, #004476 100%);">
         <div style="background-color:rgba(58,47,47,0);background-image:url(&quot;assets/img/footer.png&quot;);background-size:cover;background-repeat:no-repeat;height:366px;">
             <div class="container">
