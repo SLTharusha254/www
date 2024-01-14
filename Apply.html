@@ -196,19 +196,12 @@
     </div>
       <!-- Firebase App (core) -->
 <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js"></script>
-
-<!-- Firebase Firestore -->
 <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js"></script>
 
 <script type="module">
-  // Import the functions you need from the SDKs you need
   import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
   import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-analytics.js";
-  // TODO: Add SDKs for Firebase products that you want to use
-  // https://firebase.google.com/docs/web/setup#available-libraries
 
-  // Your web app's Firebase configuration
-  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
   const firebaseConfig = {
     apiKey: "AIzaSyCDGDKudeaOSSx0Qzirrnj-4dEriZKlE2s",
     authDomain: "slmta-application.firebaseapp.com",
@@ -219,178 +212,122 @@
     measurementId: "G-K0MSRR459P"
   };
 
-  // Initialize Firebase
   const app = initializeApp(firebaseConfig);
   const analytics = getAnalytics(app);
 
-   var push_to_firebase = function(data){
-        alert("Thanks for sending a message. I'll try and get back to you as soon as possible.")
-        var db = firebase.firestore();
+  var push_to_firebase = function(data){
+    alert("Thanks for sending a message. I'll try and get back to you as soon as possible.")
+    var db = firebase.firestore();
 
-        db.collection("messages").add({
-            name: data["name"],
-            email: data["email"],
-            message: data["msg"],
-            timestamp: Date.now()
-        })
-        .then(function(docRef) {
-            console.log("Message sent, ID: ", docRef.id);
-            location.reload();
-        })
-        .catch(function(error) {
-            console.error("Message could not be sent: ", error);
-        });
-      }
+    db.collection("messages").add({
+      name: data["name"],
+      email: data["email"],
+      message: data["msg"],
+      timestamp: Date.now()
+    })
+    .then(function(docRef) {
+      console.log("Message sent, ID: ", docRef.id);
+      location.reload();
+    })
+    .catch(function(error) {
+      console.error("Message could not be sent: ", error);
+    });
+  }
 
-      var contact_submit = function(){
-        var name = document.getElementById("name");
-        var email = document.getElementById("email");
-        var msg = document.getElementById("message");
+  var contact_submit = function(){
+    var name = document.getElementById("name");
+    var email = document.getElementById("email");
+    var msg = document.getElementById("message");
 
-        var data = {
-          "name": name.value,
-          "email": email.value,
-          "msg": msg.value
-        }
-        push_to_firebase(data);
+    var data = {
+      "name": name.value,
+      "email": email.value,
+      "msg": msg.value
+    }
+    push_to_firebase(data);
+  }
 
-      }
-
-      document.getElementById("submit_msg").addEventListener("click", contact_submit);
-    })();
+  document.getElementById("submit_msg").addEventListener("click", contact_submit);
 </script>
 
+<form>
+  <h2 class="formbold-form-title">Register now</h2>
 
-    <form >
-      <h2 class="formbold-form-title">Register now</h2>
+  <div class="formbold-input-flex">
+    <div>
+      <label for="firstname" class="formbold-form-label">First name*</label>
+      <input type="text" name="firstname" id="firstname" class="formbold-form-input"/>
+    </div>
+    <div>
+      <label for="lastname" class="formbold-form-label">Last name*</label>
+      <input type="text" name="lastname" id="lastname" class="formbold-form-input"/>
+    </div>
+  </div>
 
-      <div class="formbold-input-flex">
-        <div>
-          <label for="firstname" class="formbold-form-label">
-            First name*
-          </label>
-          <input
-            type="text"
-            name="firstname"
-            id="firstname"
-            class="formbold-form-input"
-          />
-        </div>
-        <div>
-          <label for="lastname" class="formbold-form-label"> Last name* </label>
-          <input
-            type="text"
-            name="lastname"
-            id="lastname"
-            class="formbold-form-input"
-          />
-        </div>
-      </div>
+  <div class="formbold-input-flex">
+    <div>
+      <label for="email" class="formbold-form-label">Email*</label>
+      <input type="email" name="email" id="email" class="formbold-form-input"/>
+    </div>
+    <div>
+      <label for="phone" class="formbold-form-label">Phone number*</label>
+      <input type="text" name="phone" id="phone" class="formbold-form-input"/>
+    </div>
+  </div>
 
-      <div class="formbold-input-flex">
-        <div>
-          <label for="email" class="formbold-form-label"> Email* </label>
-          <input
-            type="email"
-            name="email"
-            id="email"
-            class="formbold-form-input"
-          />
-        </div>
-        <div>
-          <label for="phone" class="formbold-form-label"> Phone number* </label>
-          <input
-            type="text"
-            name="phone"
-            id="phone"
-            class="formbold-form-input"
-          />
-        </div>
-      </div>
+  <div class="formbold-input-flex">
+    <div>
+      <label for="jobtitle" class="formbold-form-label">WhatsApp Number*</label>
+      <input type="text" name="jobtitle" id="jobtitle" class="formbold-form-input"/>
+    </div>
+    <div>
+      <label for="company" class="formbold-form-label">School/Campus*</label>
+      <input type="text" name="company" id="company" class="formbold-form-input"/>
+    </div>
+  </div>
 
-      <div class="formbold-input-flex">
-        <div>
-          <label for="jobtitle" class="formbold-form-label"> WhatsApp Number* </label>
-          <input
-            type="text"
-            name="jobtitle"
-            id="jobtitle"
-            class="formbold-form-input"
-          />
-        </div>
-        <div>
-          <label for="company" class="formbold-form-label"> School/Campus* </label>
-          <input
-            type="text"
-            name="company"
-            id="company"
-            class="formbold-form-input"
-          />
-        </div>
-      </div>
+  <div class="formbold-input-flex">
+    <div>
+      <label for="state" class="formbold-form-label">District*</label>
+      <input type="text" name="state" id="state" class="formbold-form-input"/>
+    </div>
+    <div>
+      <label for="country" class="formbold-form-label">Divisional Secretary*</label>
+      <input type="text" name="country" id="country" class="formbold-form-input"/>
+    </div>
+  </div>
 
-      <div class="formbold-input-flex">
-        <div>
-          <label for="state" class="formbold-form-label"> District* </label>
-          <input
-            type="text"
-            name="state"
-            id="state"
-            class="formbold-form-input"
-          />
-        </div>
-        <div>
-          <label for="country" class="formbold-form-label"> Divisional Secretary* </label>
-          <input
-            type="text"
-            name="country"
-            id="country"
-            class="formbold-form-input"
-          />
-        </div>
-      </div>
+  <div>
+    <label for="postcode" class="formbold-form-label">Your Special Abilities*</label>
+    <input type="text" name="postcode" id="postcode" class="formbold-form-input"/>
+  </div>
 
-      <div>
-        <label for="postcode" class="formbold-form-label"> Your Special Abilities* </label>
-        <input
-          type="text"
-          name="postcode"
-          id="postcode"
-          class="formbold-form-input"
-        />
-      </div>
+  <p class="formbold-policy">
+    By filling out this form and clicking submit, you acknowledge our
+    <a href="#" id="privacy-policy-link">privacy policy.</a>
+  </p>
 
-      <p class="formbold-policy">
-        By filling out this form and clicking submit, you acknowledge our
-        <a href="#" id="privacy-policy-link">privacy policy.</a>
-      </p>
-        <!-- Modal HTML -->
-<div id="privacy-policy-modal" class="modal">
-  <div class="modal-content">
-    <span class="close">&times;</span>
-     <h2>Privacy Policy</h2>
-        <p>Last updated: February 14, 2024</p>
+  <div id="privacy-policy-modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Privacy Policy</h2>
+      <p>Last updated: February 14, 2024</p>
+      <p>Welcome to Sri Lanka Music Therapy Association (SLMTA - LKMTA)! We are committed to ensuring the privacy and confidentiality of our members and visitors. This privacy policy outlines how we collect, use, disclose, and safeguard your personal information.</p>
+      <h3>Information We Collect:</h3>
+      <p>1. <strong>Membership Information:</strong> When you join SLMTA, we collect personal information, including your name, contact details, and professional background.</p>
+      <p>2. <strong>Website Usage Data:</strong> We may gather non-personal information, such as IP addresses, browser types, and pages visited, to improve our website's functionality and user experience.</p>
+      <p>3. <strong>Communication Data:</strong> If you contact us through emails or other communication channels, we may retain the content for record-keeping and customer service purposes.</p>
+      <h3>How We Use Your Information:</h3>
+      <p>1. <strong>Membership Management:</strong> We use your membership information to administer your account, provide member benefits, and communicate relevant updates.</p>
+      <p>2. <strong>Website Improvement:</strong> Non-personal information helps us analyze website traffic, improve content, and enhance user experience.</p>
+      <p>3. <strong>Communication:</strong> We may use your contact details to send important updates, newsletters, or event notifications related to SLMTA.</p>
+      <h3>Information Sharing:</h3>
+      <p>SLMTA does not sell, rent, or trade your personal information to third parties. We may share data with trusted partners for specific purposes, such as event coordination or member services, while ensuring confidentiality.</p>
+      <h3>Data Security:</h3>
+      <p>We employ industry-standard security measures to protect your information from unauthorized access, disclosure, alteration, or destruction.</p>
+      <h3>Your Choices:</h3>
+      <p>You can update your membership information or communication preferences at any time by contacting us at ceo@lkmta.site
 
-        <p>Welcome to Sri Lanka Music Therapy Association (SLMTA - LKMTA)! We are committed to ensuring the privacy and confidentiality of our members and visitors. This privacy policy outlines how we collect, use, disclose, and safeguard your personal information.</p>
-
-        <h3>Information We Collect:</h3>
-        <p>1. <strong>Membership Information:</strong> When you join SLMTA, we collect personal information, including your name, contact details, and professional background.</p>
-        <p>2. <strong>Website Usage Data:</strong> We may gather non-personal information, such as IP addresses, browser types, and pages visited, to improve our website's functionality and user experience.</p>
-        <p>3. <strong>Communication Data:</strong> If you contact us through emails or other communication channels, we may retain the content for record-keeping and customer service purposes.</p>
-
-        <h3>How We Use Your Information:</h3>
-        <p>1. <strong>Membership Management:</strong> We use your membership information to administer your account, provide member benefits, and communicate relevant updates.</p>
-        <p>2. <strong>Website Improvement:</strong> Non-personal information helps us analyze website traffic, improve content, and enhance user experience.</p>
-        <p>3. <strong>Communication:</strong> We may use your contact details to send important updates, newsletters, or event notifications related to SLMTA.</p>
-
-        <h3>Information Sharing:</h3>
-        <p>SLMTA does not sell, rent, or trade your personal information to third parties. We may share data with trusted partners for specific purposes, such as event coordination or member services, while ensuring confidentiality.</p>
-
-        <h3>Data Security:</h3>
-        <p>We employ industry-standard security measures to protect your information from unauthorized access, disclosure, alteration, or destruction.</p>
-
-        <h3>Your Choices:</h3>
-        <p>You can update your membership information or communication preferences at any time by contacting us at ceo@lkmta.site.</p>
 
         <h3>Policy Changes:</h3>
         <p>SLMTA may update this privacy policy periodically. Please review the latest version on our website to stay informed about our information practices.</p>
