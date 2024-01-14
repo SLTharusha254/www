@@ -371,8 +371,7 @@
   });
 </script>
 <style>
-   /* Your existing styles here */
-
+   /* Your existing             styles here */
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
@@ -395,9 +394,11 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: #fff;
-    padding: 30px; /* Increase padding for more space */
-    max-width: 600px;
+    padding: 30px;
+    max-width: 400px; /* Decreased max-width */
     width: 90%;
+    max-height: 70vh; /* Set a fixed height with viewport height unit */
+    overflow-y: auto; /* Add scrollbar when content overflows */
     border-radius: 10px;
     box-shadow: 0 0 20px rgba(0, 0, 255, 0.3);
   }
@@ -426,7 +427,7 @@ body {
   p {
     color: #333;
     line-height: 1.6;
-    margin-bottom: 15px; /* Add margin for better readability */
+    margin-bottom: 15px;
   }
 
   /* Media Query for Mobile Responsiveness */
@@ -436,7 +437,7 @@ body {
     }
   }
 
-  /* Your existing styles here */
+  /* Your existing           styles here */
 
    .navbar-brand-full {
     font-family: 'Nasalization', sans-serif; /* Apply Nasalization font on larger screens */
