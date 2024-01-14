@@ -391,8 +391,14 @@
  
   /* Your existing styles here */
 
-  .navbar-brand-fulll {
-    font-family: 'Nasalization', sans-serif; /* Apply Nasalization font */
+   .navbar-brand-full {
+    font-family: 'Nasalization', sans-serif; /* Apply Nasalization font on larger screens */
+  }
+
+  @media (max-width: 767px) {
+    .navbar-brand-full {
+      font-family: 'Nasalization', sans-serif !important; /* Apply Nasalization font on smaller screens */
+    }
   }
 
 
