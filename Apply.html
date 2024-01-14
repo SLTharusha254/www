@@ -386,21 +386,25 @@
   </div>
 </div>
 <style>
-    /* Regular styles for larger screens */
-.navbar-brand {
-    display: block; /* Ensure it's a block element by default */
+   /* Your existing styles here */
+
+/* Regular styles for larger screens */
+.navbar-brand-full,
+.navbar-brand-mobile {
+    display: none; /* Hide both brand names by default */
 }
 
 /* Styles for smaller screens (e.g., mobile) */
 @media (max-width: 767px) {
-    .navbar-brand {
-        display: none; /* Hide the full brand name on smaller screens */
+    .navbar-brand-full {
+        display: block; /* Show the full brand name on smaller screens */
     }
 
     .navbar-brand-mobile {
-        display: block; /* Show the abbreviated brand name on smaller screens */
+        display: none; /* Hide the abbreviated brand name on smaller screens */
     }
 }
+
 
     
   @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
