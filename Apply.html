@@ -220,18 +220,19 @@
     var db = firebase.firestore();
 
     db.collection("messages").add({
-      name: data["name"],
-      email: data["email"],
-      message: data["msg"],
-      timestamp: Date.now()
-    })
-    .then(function(docRef) {
-      console.log("Message sent, ID: ", docRef.id);
-      location.reload();
-    })
-    .catch(function(error) {
-      console.error("Message could not be sent: ", error);
-    });
+    name: data["name"],
+    email: data["email"],
+    message: data["msg"],
+    timestamp: Date.now()
+})
+.then(function(docRef) {
+    console.log("Message sent, ID: ", docRef.id);
+    location.reload();
+})
+.catch(function(error) {
+    console.error("Error adding message: ", error);
+});
+
   }
 
   var contact_submit = function(){
