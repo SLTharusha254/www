@@ -162,16 +162,18 @@
   <!-- Learn More: https://formbold.com -->
   <div class="formbold-form-wrapper">
     <div class="formbold-event-wrapper">
-      <h3>Sri Lanka Music Therapy Association</h3>
+        <h3>Sri Lanka Music Therapy Association</h3>
 
-      <svg width="490" height="215" viewBox="0 0 490 215" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <rect width="490" height="215" rx="5" fill="url(#pattern0)"/>
-        <defs>
-          <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
-            <image href="your-image-url-here.jpg" width="1" height="1" />
-          </pattern>
-        </defs>
-      </svg>
+        <svg width="490" height="215" viewBox="0 0 490 215" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="490" height="215" rx="5" fill="url(#pattern0)"/>
+            <!-- Define the pattern -->
+            <defs>
+                <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+                    <!-- Add the image or gradient you want to use as the background -->
+                    <image href="your-image-url-here.jpg" width="1" height="1" />
+                </pattern>
+            </defs>
+        </svg>
 
       <h4>What you’ll learn</h4>
       <p>
@@ -423,9 +425,12 @@
     font-size: 28px;
     line-height: 34px;
     color: #07074d;
-    width: 60%;
+    width: 100%; /* Set the width to 100% */
     margin-bottom: 15px;
-  }
+    white-space: nowrap; /* Prevent line breaks */
+    overflow: hidden; /* Hide overflow content */
+    text-overflow: ellipsis; /* Display an ellipsis (...) to indicate overflow */
+}
   .formbold-event-wrapper h4 {
     font-weight: 600;
     font-size: 20px;
