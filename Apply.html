@@ -131,7 +131,9 @@
 
 <body>
     <nav class="navbar navbar-expand-lg fixed-top portfolio-navbar gradient navbar-dark">
-        <div class="container"><a class="navbar-brand logo" href="#">Sri Lanka Music Therapy Association</a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navbarNav"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+        <nav class="navbar navbar-expand-lg fixed-top portfolio-navbar gradient navbar-dark">
+    <div class="container">
+        <a class="navbar-brand logo" href="#"><span class="navbar-brand-full">Sri Lanka Music Therapy Association</span><span class="navbar-brand-mobile">SLMTA</span></a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navbarNav"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <div class="theme-switcher dropdown" style="height: 17px;"><a class="dropdown-toggle" aria-expanded="false" data-bs-toggle="dropdown" href="#"><i class="icon ion-ios-lightbulb-outline mb-1"></i></a>
                     <div class="dropdown-menu"><a class="dropdown-item d-flex align-items-center" href="#" data-bs-theme-value="light"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-sun-fill opacity-50 me-2">
@@ -385,6 +387,23 @@
   </div>
 </div>
 <style>
+    /* Regular styles for larger screens */
+.navbar-brand {
+    display: block; /* Ensure it's a block element by default */
+}
+
+/* Styles for smaller screens (e.g., mobile) */
+@media (max-width: 767px) {
+    .navbar-brand {
+        display: none; /* Hide the full brand name on smaller screens */
+    }
+
+    .navbar-brand-mobile {
+        display: block; /* Show the abbreviated brand name on smaller screens */
+    }
+}
+
+    
   @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
   * {
     margin: 0;
