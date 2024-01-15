@@ -34,7 +34,7 @@ function submitForm(e) {
     saveMessages(key, firstName, lastName, email, phone, whatsapp, schoolOrCampus, district, division, specials);
 
     // Enable and show alert
-    var alertBox = document.querySelector('.alert');
+    var alertBox = document.getElementById('alertBox');
     alertBox.style.display = 'block';
 
     // Reset the form
@@ -63,6 +63,6 @@ const getElementVal = (id) => {
 };
 
 function closeAlert() {
-    var alertBox = document.querySelector('.alert');
+    var alertBox = document.getElementById('alertBox');
     alertBox.style.display = 'none';
 }
