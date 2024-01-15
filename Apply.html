@@ -194,62 +194,6 @@
         </ul>
       </div>
     </div>
-      <!-- Firebase App (core) -->
-<script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js"></script>
-
-<script type="module">
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
-  import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-analytics.js";
-
-  const firebaseConfig = {
-    apiKey: "AIzaSyCDGDKudeaOSSx0Qzirrnj-4dEriZKlE2s",
-    authDomain: "slmta-application.firebaseapp.com",
-    projectId: "slmta-application",
-    storageBucket: "slmta-application.appspot.com",
-    messagingSenderId: "67774695737",
-    appId: "1:67774695737:web:58fc344b0f9baf176dc0e8",
-    measurementId: "G-K0MSRR459P"
-  };
-
-  const app = initializeApp(firebaseConfig);
-  const analytics = getAnalytics(app);
-
-  var push_to_firebase = function(data){
-    alert("Thanks for sending a message. I'll try and get back to you as soon as possible.")
-    var db = firebase.firestore();
-
-    db.collection("messages").add({
-    name: data["name"],
-    email: data["email"],
-    message: data["msg"],
-    timestamp: Date.now()
-})
-.then(function(docRef) {
-    console.log("Message sent, ID: ", docRef.id);
-    location.reload();
-})
-.catch(function(error) {
-    console.error("Error adding message: ", error);
-});
-
-  }
-
-  var contact_submit = function(){
-    var name = document.getElementById("name");
-    var email = document.getElementById("email");
-    var msg = document.getElementById("message");
-
-    var data = {
-      "name": name.value,
-      "email": email.value,
-      "msg": msg.value
-    }
-    push_to_firebase(data);
-  }
-
-  document.getElementById("submit_msg").addEventListener("click", contact_submit);
-</script>
 
 <form>
   <h2 class="formbold-form-title">Register now</h2>
@@ -342,6 +286,8 @@
     </form>
   </div>
 </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+    <script src="./mail.js"></script>
     <script>
   // JavaScript to handle modal display
   document.addEventListener('DOMContentLoaded', function() {
