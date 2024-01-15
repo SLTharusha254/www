@@ -1,5 +1,11 @@
 const firebaseConfig = {
-  //   copy your firebase config informations
+    apiKey: "AIzaSyDKxht0ArhG3Rb-kpY4zifnH_nKux1-4QU",
+    authDomain: "slmta-application-8920c.firebaseapp.com",
+    databaseURL: "https://slmta-application-8920c-default-rtdb.firebaseio.com",
+    projectId: "slmta-application-8920c",
+    storageBucket: "slmta-application-8920c.appspot.com",
+    messagingSenderId: "583899301788",
+    appId: "1:583899301788:web:fe65c132cb16b6e365aa59"
 };
 
 // initialize firebase
