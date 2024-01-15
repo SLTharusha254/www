@@ -17,52 +17,52 @@ var applicantsDB = firebase.database().ref("Applicants");
 document.getElementById("contactForm").addEventListener("submit", submitForm);
 
 function submitForm(e) {
-  e.preventDefault();
+    e.preventDefault();
 
-  var firstName = getElementVal("firstname");
-  var lastName = getElementVal("lastname");
-  var email = getElementVal("email");
-  var phone = getElementVal("phone");
-  var whatsapp = getElementVal("whatsapp");
-  var schoolOrCampus = getElementVal("schoolORcampus");
-  var district = getElementVal("district");
-  var division = getElementVal("division");
-  var specials = getElementVal("specials");
+    var firstName = getElementVal("firstname");
+    var lastName = getElementVal("lastname");
+    var email = getElementVal("email");
+    var phone = getElementVal("phone");
+    var whatsapp = getElementVal("whatsapp");
+    var schoolOrCampus = getElementVal("schoolORcampus");
+    var district = getElementVal("district");
+    var division = getElementVal("division");
+    var specials = getElementVal("specials");
 
-  var key = firstName + lastName; // Creating a key using firstName and lastName
+    var key = firstName + lastName; // Creating a key using firstName and lastName
 
-  saveMessages(key, firstName, lastName, email, phone, whatsapp, schoolOrCampus, district, division, specials);
+    saveMessages(key, firstName, lastName, email, phone, whatsapp, schoolOrCampus, district, division, specials);
 
-  // Enable alert
-  document.querySelector(".alert").style.display = "block";
+    // Enable and show alert
+    var alertBox = document.getElementById('alertBox');
+    alertBox.style.display = 'block';
 
-  // Remove the alert
- function closeAlert() {
-    var alertBox = document.querySelector('.alert');
-    alertBox.style.display = 'none';
-}
-
-  // Reset the form
-  document.getElementById("contactForm").reset();
+    // Reset the form
+    document.getElementById("contactForm").reset();
 }
 
 const saveMessages = (key, firstName, lastName, email, phone, whatsapp, schoolOrCampus, district, division, specials) => {
-  var newApplicant = applicantsDB.child(key);
+    var newApplicant = applicantsDB.child(key);
 
-  newApplicant.set({
-    firstName: firstName,
-    lastName: lastName,
-    email: email,
-    phone: phone,
-    whatsapp: whatsapp,
-    schoolOrCampus: schoolOrCampus,
-    district: district,
-    division: division,
-    specials: specials,
-    // Add more fields as needed
-  });
+    newApplicant.set({
+        firstName: firstName,
+        lastName: lastName,
+        email: email,
+        phone: phone,
+        whatsapp: whatsapp,
+        schoolOrCampus: schoolOrCampus,
+        district: district,
+        division: division,
+        specials: specials,
+        // Add more fields as needed
+    });
 };
 
 const getElementVal = (id) => {
-  return document.getElementById(id).value;
+    return document.getElementById(id).value;
 };
+
+function closeAlert() {
+    var alertBox = document.getElementById('alertBox');
+    alertBox.style.display = 'none';
+}
