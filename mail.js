@@ -23,13 +23,13 @@ function submitForm(e) {
   var lastName = getElementVal("lastname");
   var email = getElementVal("email");
   var phone = getElementVal("phone");
-  var jobTitle = getElementVal("jobtitle");
-  var company = getElementVal("company");
-  var state = getElementVal("state");
-  var country = getElementVal("country");
-  var msgContent = getElementVal("msgContent");
+  var whatsapp = getElementVal("whatsapp");
+  var schoolOrCampus = getElementVal("schoolORcampus");
+  var district = getElementVal("district");
+  var division = getElementVal("division");
+  var specials = getElementVal("specials");
 
-  saveMessages(firstName, lastName, email, phone, jobTitle, company, state, country, msgContent);
+  saveMessages(firstName, lastName, email, phone, whatsapp, schoolOrCampus, district, division, specials);
 
   // Enable alert
   document.querySelector(".alert").style.display = "block";
@@ -43,7 +43,7 @@ function submitForm(e) {
   document.getElementById("contactForm").reset();
 }
 
-const saveMessages = (firstName, lastName, email, phone, jobTitle, company, state, country, msgContent) => {
+const saveMessages = (firstName, lastName, email, phone, whatsapp, schoolOrCampus, district, division, specials) => {
   var newContactForm = contactFormDB.push();
 
   newContactForm.set({
@@ -51,11 +51,11 @@ const saveMessages = (firstName, lastName, email, phone, jobTitle, company, stat
     lastName: lastName,
     email: email,
     phone: phone,
-    jobTitle: jobTitle,
-    company: company,
-    state: state,
-    country: country,
-    msgContent: msgContent,
+    whatsapp: whatsapp,
+    schoolOrCampus: schoolOrCampus,
+    district: district,
+    division: division,
+    specials: specials,
     // Add more fields as needed
   });
 };
