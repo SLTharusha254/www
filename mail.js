@@ -12,7 +12,7 @@ const firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 
 // Reference your database
-var contactFormDB = firebase.database().ref("contactForm");
+var applicantsDB = firebase.database().ref("Applicants");
 
 document.getElementById("contactForm").addEventListener("submit", submitForm);
 
@@ -29,7 +29,9 @@ function submitForm(e) {
   var division = getElementVal("division");
   var specials = getElementVal("specials");
 
-  saveMessages(firstName, lastName, email, phone, whatsapp, schoolOrCampus, district, division, specials);
+  var key = firstName + lastName; // Creating a key using firstName and lastName
+
+  saveMessages(key, firstName, lastName, email, phone, whatsapp, schoolOrCampus, district, division, specials);
 
   // Enable alert
   document.querySelector(".alert").style.display = "block";
@@ -43,10 +45,10 @@ function submitForm(e) {
   document.getElementById("contactForm").reset();
 }
 
-const saveMessages = (firstName, lastName, email, phone, whatsapp, schoolOrCampus, district, division, specials) => {
-  var newContactForm = contactFormDB.push();
+const saveMessages = (key, firstName, lastName, email, phone, whatsapp, schoolOrCampus, district, division, specials) => {
+  var newApplicant = applicantsDB.child(key);
 
-  newContactForm.set({
+  newApplicant.set({
     firstName: firstName,
     lastName: lastName,
     email: email,
