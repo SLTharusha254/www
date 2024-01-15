@@ -62,7 +62,54 @@ const getElementVal = (id) => {
     return document.getElementById(id).value;
 };
 
+function joinWhatsAppGroup() {
+    // Update this link with your actual WhatsApp group invite link
+    var whatsappGroupLink = "https://chat.whatsapp.com/GwEQz13nn4V0GBVpssTStA";
+
+    // Open the WhatsApp group invite link in a new tab
+    window.open(whatsappGroupLink, '_blank');
+
+    // Enable and show alert
+    var alertBox = document.getElementById('alertBox');
+    alertBox.style.display = 'block';
+
+    // Reset the form (optional)
+    document.getElementById("contactForm").reset();
+
+    // Prevent the form from submitting (optional)
+    return false;
+}
+
 function closeAlert() {
     var alertBox = document.getElementById('alertBox');
     alertBox.style.display = 'none';
 }
+
+// JavaScript to handle modal display
+document.addEventListener('DOMContentLoaded', function () {
+    // Get the modal
+    var modal = document.getElementById('privacy-policy-modal');
+
+    // Get the link that opens the modal
+    var privacyPolicyLink = document.getElementById('privacy-policy-link');
+
+    // Get the <span> element that closes the modal
+    var closeBtn = document.getElementsByClassName('close')[0];
+
+    // When the user clicks on the link, open the modal
+    privacyPolicyLink.onclick = function () {
+        modal.style.display = 'block';
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    closeBtn.onclick = function () {
+        modal.style.display = 'none';
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function (event) {
+        if (event.target == modal) {
+            modal.style.display = 'none';
+        }
+    }
+});
