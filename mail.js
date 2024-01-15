@@ -8,10 +8,10 @@ const firebaseConfig = {
     appId: "1:583899301788:web:fe65c132cb16b6e365aa59"
 };
 
-// initialize firebase
+// Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 
-// reference your database
+// Reference your database
 var contactFormDB = firebase.database().ref("contactForm");
 
 document.getElementById("contactForm").addEventListener("submit", submitForm);
@@ -19,30 +19,42 @@ document.getElementById("contactForm").addEventListener("submit", submitForm);
 function submitForm(e) {
   e.preventDefault();
 
-  var name = getElementVal("firstname");
-  var emailid = getElementVal("email");
+  var firstName = getElementVal("firstname");
+  var lastName = getElementVal("lastname");
+  var email = getElementVal("email");
+  var phone = getElementVal("phone");
+  var jobTitle = getElementVal("jobtitle");
+  var company = getElementVal("company");
+  var state = getElementVal("state");
+  var country = getElementVal("country");
   var msgContent = getElementVal("msgContent");
 
-  saveMessages(name, emailid, msgContent);
+  saveMessages(firstName, lastName, email, phone, jobTitle, company, state, country, msgContent);
 
-  //   enable alert
+  // Enable alert
   document.querySelector(".alert").style.display = "block";
 
-  //   remove the alert
+  // Remove the alert
   setTimeout(() => {
     document.querySelector(".alert").style.display = "none";
   }, 3000);
 
-  //   reset the form
+  // Reset the form
   document.getElementById("contactForm").reset();
 }
 
-const saveMessages = (name, emailid, msgContent) => {
+const saveMessages = (firstName, lastName, email, phone, jobTitle, company, state, country, msgContent) => {
   var newContactForm = contactFormDB.push();
 
   newContactForm.set({
-    name: name,
-    emailid: emailid,
+    firstName: firstName,
+    lastName: lastName,
+    email: email,
+    phone: phone,
+    jobTitle: jobTitle,
+    company: company,
+    state: state,
+    country: country,
     msgContent: msgContent,
   });
 };
