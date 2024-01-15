@@ -56,6 +56,7 @@ const saveMessages = (firstName, lastName, email, phone, jobTitle, company, stat
     state: state,
     country: country,
     msgContent: msgContent,
+    // Add more fields as needed
   });
 };
 
