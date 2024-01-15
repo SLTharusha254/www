@@ -195,13 +195,14 @@
       </div>
     </div>
 
-<form>
+<form action="" id="contactForm">
+    <div class="alert">Your message sent</div>
   <h2 class="formbold-form-title">Register now</h2>
 
   <div class="formbold-input-flex">
     <div>
       <label for="firstname" class="formbold-form-label">First name*</label>
-      <input type="text" name="firstname" id="firstname" class="formbold-form-input"/>
+      <input type="text" name="name" id="firstname" class="formbold-form-input"/>
     </div>
     <div>
       <label for="lastname" class="formbold-form-label">Last name*</label>
@@ -212,7 +213,7 @@
   <div class="formbold-input-flex">
     <div>
       <label for="email" class="formbold-form-label">Email*</label>
-      <input type="email" name="email" id="email" class="formbold-form-input"/>
+      <input type="email" name="emailid" id="email" class="formbold-form-input"/>
     </div>
     <div>
       <label for="phone" class="formbold-form-label">Phone number*</label>
@@ -244,7 +245,7 @@
 
   <div>
     <label for="postcode" class="formbold-form-label">Your Special Abilities*</label>
-    <input type="text" name="postcode" id="postcode" class="formbold-form-input"/>
+    <input type="text" name="postcode" id="msgContent" class="formbold-form-input"/>
   </div>
 
   <p class="formbold-policy">
@@ -282,7 +283,7 @@
   </div>
 </div>
 
-      <button class="formbold-btn">Submit Event Registration</button>
+      <button type="submit" class="formbold-btn">Submit Event Registration</button>
     </form>
   </div>
 </div>
@@ -319,6 +320,16 @@
   });
 </script>
 <style>
+    .alert{
+    width: 100%;
+    background: rgb(0, 255, 106);
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 900;
+    display: none;
+}
    /* Your existing             styles here */
 body {
     font-family: 'Arial', sans-serif;
