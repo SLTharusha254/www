@@ -9,7 +9,8 @@ const firebaseConfig = {
 };
 
 // Initialize Firebase
-firebase.initializeApp(firebaseConfig);
+var firebaseApp = firebase.initializeApp(firebaseConfig);
+var applicantsDB = firebaseApp.database().ref("Applicants");
 
 // Reference your database
 var applicantsDB = firebase.database().ref("Applicants");
