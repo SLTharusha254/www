@@ -37,9 +37,10 @@ function submitForm(e) {
   document.querySelector(".alert").style.display = "block";
 
   // Remove the alert
-  setTimeout(() => {
-    document.querySelector(".alert").style.display = "none";
-  }, 3000);
+ function closeAlert() {
+    var alertBox = document.querySelector('.alert');
+    alertBox.style.display = 'none';
+}
 
   // Reset the form
   document.getElementById("contactForm").reset();
