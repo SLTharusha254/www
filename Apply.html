@@ -294,6 +294,29 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
     <script src="./mail.js"></script>
     <script>
+
+        function joinWhatsAppGroup() {
+        // Update this link with your actual WhatsApp group invite link
+        var whatsappGroupLink = "https://chat.whatsapp.com/GwEQz13nn4V0GBVpssTStA";
+        
+        // Open the WhatsApp group invite link in a new tab
+        window.open(whatsappGroupLink, '_blank');
+        
+        // Enable and show alert
+        var alertBox = document.getElementById('alertBox');
+        alertBox.style.display = 'block';
+
+        // Reset the form (optional)
+        document.getElementById("contactForm").reset();
+        
+        // Prevent the form from submitting (optional)
+        return false;
+    }
+
+    function closeAlert() {
+        var alertBox = document.getElementById('alertBox');
+        alertBox.style.display = 'none';
+    }
   // JavaScript to handle modal display
   document.addEventListener('DOMContentLoaded', function() {
     // Get the modal
