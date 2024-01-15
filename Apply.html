@@ -196,7 +196,11 @@
     </div>
 
 <form action="" id="contactForm">
-    <div class="alert">Your message sent</div>
+   <div class="alert alert-futuristic">
+    You will added to group soon
+    <span class="close-btn" onclick="closeAlert()">&times;</span>
+</div>
+
   <h2 class="formbold-form-title">Register now</h2>
 
   <div class="formbold-input-flex">
@@ -283,7 +287,7 @@
   </div>
 </div>
 
-      <button type="submit" class="formbold-btn">Submit Event Registration</button>
+      <button type="submit" class="formbold-btn">Register as member</button>
     </form>
   </div>
 </div>
@@ -320,16 +324,34 @@
   });
 </script>
 <style>
-    .alert{
-    width: 100%;
-    background: rgb(0, 255, 106);
-    padding: 10px 20px;
+    .alert {
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid #3498db;
     border-radius: 5px;
-    text-align: center;
-    font-size: 18px;
-    font-weight: 900;
-    display: none;
+    color: #3498db;
+    background-color: #ecf0f1;
+    position: relative;
 }
+
+.alert.alert-futuristic {
+    background-color: #3498db;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    color: #ffffff;
+}
+
    /* Your existing             styles here */
 body {
     font-family: 'Arial', sans-serif;
