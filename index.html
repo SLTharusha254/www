@@ -6,7 +6,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Ceylon Music Therapy Association - CMTA - LKMTA - SLMTA - Merry Christmas </title>
+	<title>Ceylon Music Therapy Association - CMTA - LKMTA - SLMTA - Merry Christmas! </title>
 	<!-- Google Fonts -->
 	<link rel="preconnect" href="https://fonts.googleapis.com/">
 	<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
@@ -24,27 +24,27 @@
 	<link rel="icon" href="images/icons/favicon-192x192.png" sizes="192x192" />
 	<link rel="apple-touch-icon-precomposed" href="images/icons/favicon-180x180.png" />
 <style>
-    /* Configure the snow */
-    .snow {
-      position: absolute;
-      width: 10px;
-      height: 10px;
-      background: white;
-      border-radius: 50%;
-      animation: snow-fall 10s linear infinite;
-    }
+   /* Configure the snow */
+body .snow {  /* Add 'body' to increase specificity */
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: white;
+  border-radius: 50%;
+  animation: snow-fall 10s linear infinite;
+}
 
-    /* Define the snow animation */
-    @keyframes snow-fall {
-      0% {
-        transform: translate3d(0, -10vh, 0);
-        opacity: 1;
-      }
-      100% {
-        transform: translate3d(5vw, 110vh, 0);
-        opacity: 0;
-      }
-    }
+/* Define the snow animation */
+@keyframes snow-fall {
+  0% {
+    transform: translate3d(0, -10vh, 0);
+    opacity: 1;
+  }
+  100% {
+    transform: translate3d(5vw, 110vh, 0);
+    opacity: 0;
+  }
+}
   </style>
 </head>
 <body class="home">
