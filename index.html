@@ -26,33 +26,7 @@
 <style>
 
 
-	.christmas-lights {
-  display: flex; /* Arrange bulbs in a row */
-  overflow: hidden; /* Hide bulbs that overflow */
-  /* Adjust positioning based on where you want the lights */
-}
-
-.bulb {
-  width: 10px;
-  height: 10px;
-  background-color: red; /* Or your desired color */
-  border-radius: 50%; /* Make them round */
-  margin: 0 5px; /* Adjust spacing between bulbs */
-  box-shadow: 0 0 5px red; /* Add a subtle glow */
-  animation: twinkle 1s infinite alternate; /* Apply the twinkle animation */
-}
-
-/* Twinkle animation */
-@keyframes twinkle {
-  0% { opacity: 0.2; }
-  100% { opacity: 1; }
-}
-
-/* Add different colors for some bulbs */
-.bulb:nth-child(3n) { background-color: green; box-shadow: 0 0 5px green; }
-.bulb:nth-child(4n) { background-color: gold; box-shadow: 0 0 5px gold; }
-
-
+	
 	
 /* customizable snowflake styling */
 .snowflake {
@@ -66,13 +40,7 @@
 </style>
 </head>
 <body class="home">
-	<header>
-  <div class="christmas-lights">
-    <span class="bulb"></span>
-    <span class="bulb"></span>
-    <span class="bulb"></span>
-    </div>
-</header>
+
 
   <div class="snowflakes" aria-hidden="true">
   <div class="snowflake">
